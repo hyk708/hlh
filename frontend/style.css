@@ -1,0 +1,202 @@
+/* General styling and dark theme */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.centered {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Utility class */
+.hidden {
+    display: none !important;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 30px;
+}
+
+/* Input form styling */
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+#addressInput {
+    width: 70%;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px 0 0 8px;
+    color: #e0e0e0;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#addressInput:focus {
+    border-color: #007bff;
+}
+
+#submitBtn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#currentAddress {
+    font-family: monospace;
+    background-color: #2a2a2a;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.dashboard-layout {
+    display: flex;
+    gap: 20px;
+    height: 75vh;
+}
+
+/* Graph container */
+#network-container {
+    flex-grow: 1;
+    position: relative;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+}
+
+/* Loading spinner */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 8px;
+}
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Details panel */
+#details-panel {
+    width: 350px;
+    flex-shrink: 0;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+.details-panel-hidden {
+    opacity: 0.5;
+}
+#details-title {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+/* Details content styling */
+#details-content p {
+    margin: 5px 0;
+}
+#details-content strong {
+    color: #ffffff;
+}
+#details-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+#details-content li {
+    margin-bottom: 8px;
+}
+.token-item, .nft-item {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.tx-hash {
+    font-family: monospace;
+    font-size: 0.8rem;
+    word-break: break-all;
+}
+.tx-hash a {
+    color: #0099ff;
+    text-decoration: none;
+}

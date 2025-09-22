@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Farmer Visualization Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <section id="input-section" class="container centered">
+        <h1>포인트 파머를 위한 시각화 툴(Point Farmer Visualization Tool)</h1>
+        <p class="subtitle">HyperEVM 주소를 입력하여 당신의 활동을 시각화하세요.(Enter your HyperEVM address to visualize your activity)</p>
+        <div class="input-group">
+            <input type="text" id="addressInput" placeholder="HyperEVM 주소를 입력하세요.(Enter your HyperEVM address)">
+            <button id="submitBtn">분석하기(Analyze)</button>
+        </div>
+    </section>
+
+    <section id="dashboard-section" class="container hidden">
+         <header>
+            <button id="backBtn" class="back-link"> &larr; 새 주소 분석(Analyze new address)</button>
+            <p>분석 주소(Analyzed address): <strong id="currentAddress"></strong></p>
+        </header>
+        
+        <div class="dashboard-layout">
+            <div id="network-container">
+                <div id="loading" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <p>데이터 분석 중(Analyzing data)</p>
+                </div>
+                <div id="network"></div>
+            </div>
+            
+            <div id="details-panel" class="details-panel-hidden">
+                <h3 id="details-title">상세 정보(Detail Information)</h3>
+                <div id="details-content">
+                    <p>노드를 클릭하여 상세 정보를 확인하세요.(click the node to view the detailed information)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
